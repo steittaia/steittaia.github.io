@@ -4,13 +4,17 @@
   <meta charset="utf-8">
   
   
-  <title>Hexo</title>
+  <title>C++ STL常用函数 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="STL容器std::string 字符串容器  123456789101112131415161718192021222324252627282930313233343536373839404142434445std::string s; &#x2F;&#x2F; 新建字符串，默认为空s &#x3D; &quot;abcd&quot;; &#x2F;&#x2F; 字符串赋值&#x2F;&#x2F; 字符串比较，按字典序s &#x3D;&#x3D; &quot;abcd&quot;; &#x2F;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++ STL常用函数">
+<meta property="og:url" content="http://example.com/2023/03/15/stl/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="STL容器std::string 字符串容器  123456789101112131415161718192021222324252627282930313233343536373839404142434445std::string s; &#x2F;&#x2F; 新建字符串，默认为空s &#x3D; &quot;abcd&quot;; &#x2F;&#x2F; 字符串赋值&#x2F;&#x2F; 字符串比较，按字典序s &#x3D;&#x3D; &quot;abcd&quot;; &#x2F;">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-03-15T10:05:36.000Z">
+<meta property="article:modified_time" content="2023-03-15T10:06:26.601Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -69,9 +73,7 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-stl" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-stl" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/03/15/stl/" class="article-date">
   <time class="dt-published" datetime="2023-03-15T10:05:36.000Z" itemprop="datePublished">2023-03-15</time>
@@ -84,8 +86,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/03/15/stl/">C++ STL常用函数</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      C++ STL常用函数
     </h1>
   
 
@@ -129,165 +131,19 @@
     </footer>
   </div>
   
-</article>
-
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-test_rename" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/03/14/test_rename/" class="article-date">
-  <time class="dt-published" datetime="2023-03-14T13:46:46.000Z" itemprop="datePublished">2023-03-14</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/03/14/test_rename/">Hexo + Github pages搭建个人博客</a>
-    </h1>
+    <a href="/2023/03/14/test_rename/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hexo + Github pages搭建个人博客</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Hexo + Github pages搭建个人博客</p>
-<p>参考资料：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/26625249">Hexo搭建个人博客</a></p>
-<h3 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h3><ul>
-<li>操作系统: win10</li>
-<li>Node.js: v18.15.0</li>
-<li>git: 2.39.2</li>
-</ul>
-<p>首先安装nodejs和git</p>
-<p>检查Node.js是否安装成功：在命令行中输入</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node --version</span><br><span class="line">npm --version</span><br></pre></td></tr></table></figure>
-
-
-<p>第一次使用git，需要配置user.name和user.email信息</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;github用户名&quot;</span><br><span class="line">git config --global user.name “github注册邮箱”</span><br></pre></td></tr></table></figure>
-<p>注册完之后确定是否配置成功：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config user.name</span><br><span class="line">git config user.email</span><br></pre></td></tr></table></figure>
-<p>生成ssh密钥文件：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;github注册邮箱&quot;</span><br></pre></td></tr></table></figure>
-<p>后续默认按三个回车即可，生成完毕之后在生成的.ssh文件夹中找到id_rsa.pub密钥，即生成的公钥。在<a target="_blank" rel="noopener" href="https://github.com/settings/keys">SSH and GPG keys</a>页面中新建SSH keys，title自选，Key中填入公钥内容。</p>
-<p>检查ssh公钥是否配置成功：在Git Bash中输入</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh git@github.com</span><br></pre></td></tr></table></figure>
-<p>显示如下提示即为成功。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">PTY allocation request failed on channel 0</span><br><span class="line">You&#x27;ve successfully authenticated, but GitHub does not provide shell access.</span><br><span class="line">Connection to github.com closed.</span><br></pre></td></tr></table></figure>
-<p>在想要创建博客的文件夹中打开命令行，输入</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<p>来安装hexo。</p>
-<h3 id="在github上创建仓库"><a href="#在github上创建仓库" class="headerlink" title="在github上创建仓库"></a>在github上创建仓库</h3><p>仓库名为</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用户名.github.io</span><br></pre></td></tr></table></figure>
-<h3 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h3><p>输入</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
-<p>该命令会创建一个blog文件夹，然后依次执行</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd blog</span><br><span class="line">hexo new test_site</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-<p>第一条命令是移动到新建的blog文件夹中，后面三条指令分别是创建一个新的博客、生成博客网页、在本地预览博客网页。（文章末尾附常用Hexo指令操作）</p>
-<p>完成后，打开浏览器输入地址</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">localhost:4000</span><br></pre></td></tr></table></figure>
-<p>即可在本地预览生成的博客。</p>
-<h3 id="将博客与Github-Pages关联"><a href="#将博客与Github-Pages关联" class="headerlink" title="将博客与Github Pages关联"></a>将博客与Github Pages关联</h3><p>打开blog&#x2F;_config.yaml，在最后修改</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: ”git仓库的地址，结尾为github.io.git“</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<p>并保存。</p>
-<p>安装Git部署插件：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<p>然后输入</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<p>即可完成网站部署。</p>
-<p>此时博客已经在网络上上线，访问</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用户名.github.io</span><br></pre></td></tr></table></figure>
-<p>即可进入博客。</p>
-<h4 id="Hexo常用指令"><a href="#Hexo常用指令" class="headerlink" title="Hexo常用指令"></a>Hexo常用指令</h4><ul>
-<li><p>npm install hexo -g #安装Hexo</p>
-</li>
-<li><p>npm update hexo -g #更新Hexo</p>
-</li>
-<li><p>hexo init blog #新建初始化博客，在blog文件夹下</p>
-</li>
-<li><p>hexo n blog_name &#x3D; hexo new blog_name #新建名为blog_name的文章</p>
-</li>
-<li><p>hexo g &#x3D; hexo generate #生成博客网页</p>
-</li>
-<li><p>hexo s &#x3D; hexo server #在本地端口预览</p>
-</li>
-<li><p>hexo d &#x3D; hexo deploy #部署网页</p>
-</li>
-<li><p>hexo clean #清除缓存</p>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/03/14/test_rename/" data-id="clf9b9yof000050u6grmn7mzz" data-title="Hexo + Github pages搭建个人博客" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/03/14/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2023-03-14T13:39:42.769Z" itemprop="datePublished">2023-03-14</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/03/14/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/03/14/hello-world/" data-id="clf9b9yok000150u67nrk0pn2" data-title="Hello World" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
 </section>
