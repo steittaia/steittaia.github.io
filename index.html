@@ -85,7 +85,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/03/14/test_rename/">test_name</a>
+      <a class="p-name article-title" href="/2023/03/14/test_rename/">Hexo + Github pages搭建个人博客</a>
     </h1>
   
 
@@ -93,11 +93,75 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        
+        <p>参考资料：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/26625249">Hexo搭建个人博客</a></p>
+<h3 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h3><ul>
+<li>操作系统: win10</li>
+<li>Node.js: v18.15.0</li>
+<li>git: 2.39.2</li>
+</ul>
+<p>首先安装nodejs和git</p>
+<p>检查Node.js是否安装成功：在命令行中输入</p>
+<p>​    node –version<br>​    npm –version</p>
+<p>第一次使用git，需要配置user.name和user.email信息</p>
+<p>​    git config –global user.name “github用户名”<br>​    git config –global user.name “github注册邮箱”<br>​<br>注册完之后确定是否配置成功：</p>
+<p>​    git config user.name<br>​    git config user.email</p>
+<p>生成ssh密钥文件：</p>
+<p>​    ssh-keygen -t rsa -C “github注册邮箱”</p>
+<p>后续默认按三个回车即可，生成完毕之后在生成的.ssh文件夹中找到id_rsa.pub密钥，即生成的公钥。在<a target="_blank" rel="noopener" href="https://github.com/settings/keys">SSH and GPG keys</a>页面中新建SSH keys，title自选，Key中填入公钥内容。</p>
+<p>检查ssh公钥是否配置成功：在Git Bash中输入</p>
+<p>​    ssh <a href="mailto:&#103;&#105;&#116;&#64;&#x67;&#105;&#116;&#x68;&#x75;&#98;&#x2e;&#99;&#x6f;&#109;">&#103;&#105;&#116;&#64;&#x67;&#105;&#116;&#x68;&#x75;&#98;&#x2e;&#99;&#x6f;&#109;</a></p>
+<p>显示如下提示即为成功。</p>
+<p>​    PTY allocation request failed on channel 0<br>​    You’ve successfully authenticated, but GitHub does not provide shell access.<br>​    Connection to github.com closed.</p>
+<p>在想要创建博客的文件夹中打开命令行，输入</p>
+<p>​    npm install -g hexo-cli</p>
+<p>来安装hexo。</p>
+<h3 id="在github上创建仓库"><a href="#在github上创建仓库" class="headerlink" title="在github上创建仓库"></a>在github上创建仓库</h3><p>仓库名为</p>
+<p>​    用户名.github.io</p>
+<h3 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h3><p>输入</p>
+<p>​    hexo init blog</p>
+<p>该命令会创建一个blog文件夹，然后依次执行</p>
+<p>​    cd blog<br>​    hexo new test_site<br>​    hexo g<br>​    hexo s</p>
+<p>第一条命令是移动到新建的blog文件夹中，后面三条指令分别是创建一个新的博客、生成博客网页、在本地预览博客网页。（文章末尾附常用Hexo指令操作）</p>
+<p>完成后，打开浏览器输入地址</p>
+<p>​    localhost:4000</p>
+<p>即可在本地预览生成的博客。</p>
+<h3 id="将博客与Github-Pages关联"><a href="#将博客与Github-Pages关联" class="headerlink" title="将博客与Github Pages关联"></a>将博客与Github Pages关联</h3><p>打开blog&#x2F;_config.yaml，在最后修改</p>
+<pre><code># Deployment
+## Docs: https://hexo.io/docs/one-command-deployment
+</code></pre>
+<p>​    deploy:<br>​      type: git<br>​      repo: ”git仓库的地址，结尾为github.io.git“<br>​      branch: master</p>
+<p>并保存。</p>
+<p>安装Git部署插件：</p>
+<p>​    npm install hexo-deployer-git –save</p>
+<p>然后输入</p>
+<p>​    hexo clean<br>​    hexo g<br>​    hexo d</p>
+<p>即可完成网站部署。</p>
+<p>此时博客已经在网络上上线，访问</p>
+<p>​    用户名.github.io</p>
+<p>即可进入博客。</p>
+<h4 id="Hexo常用指令"><a href="#Hexo常用指令" class="headerlink" title="Hexo常用指令"></a>Hexo常用指令</h4><ul>
+<li><p>npm install hexo -g #安装Hexo</p>
+</li>
+<li><p>npm update hexo -g #更新Hexo</p>
+</li>
+<li><p>hexo init blog #新建初始化博客，在blog文件夹下</p>
+</li>
+<li><p>hexo n blog_name &#x3D; hexo new blog_name #新建名为blog_name的文章</p>
+</li>
+<li><p>hexo g &#x3D; hexo generate #生成博客网页</p>
+</li>
+<li><p>hexo s &#x3D; hexo server #在本地端口预览</p>
+</li>
+<li><p>hexo d &#x3D; hexo deploy #部署网页</p>
+</li>
+<li><p>hexo clean #清除缓存</p>
+</li>
+</ul>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/03/14/test_rename/" data-id="clf9b9yof000050u6grmn7mzz" data-title="test_name" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/03/14/test_rename/" data-id="clf9b9yof000050u6grmn7mzz" data-title="Hexo + Github pages搭建个人博客" class="article-share-link">Share</a>
       
       
       
@@ -191,7 +255,7 @@
       <ul>
         
           <li>
-            <a href="/2023/03/14/test_rename/">test_name</a>
+            <a href="/2023/03/14/test_rename/">Hexo + Github pages搭建个人博客</a>
           </li>
         
           <li>
